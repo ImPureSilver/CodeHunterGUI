@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+TODO: - Add names to the buttons and the fields
+          - also make sure to make this the website list adder
+          - add some keyboard listeners to the text box (use enter while in the box)
+          - and one for the whole menu to leave it (Use esc)
+-->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="482.0"
+            prefWidth="836.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="codehunt.controller.WebListController">
+    <top>
+        <TextField fx:id="textBox" onKeyPressed="#saveSiteToList" prefHeight="64.0" prefWidth="818.0"
+                   promptText="Type website here..." style="-fx-background-color: #5e5e5e;"
+                   BorderPane.alignment="CENTER"/>
+    </top>
+    <center>
+        <ListView fx:id="websiteListView" onKeyPressed="#deleteItem" prefHeight="403.0" prefWidth="818.0"
+                  style="-fx-background-color: #777777;" BorderPane.alignment="CENTER"/>
+    </center>
+    <bottom>
+        <ButtonBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #5e5e5e;"
+                   BorderPane.alignment="CENTER">
+            <buttons>
+                <Button fx:id="saveButton" layoutX="753.0" layoutY="17.0" mnemonicParsing="false" onAction="#save"
+                        prefHeight="26.0" prefWidth="442.0"
+                        style="-fx-background-radius: 50; -fx-background-color: #CCCCCC;" text="Save">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+                <Button fx:id="loadButton" onMouseClicked="#load" mnemonicParsing="false"
+                        style="-fx-background-radius: 50; -fx-background-color: #CCCCCC;" text="Load Data">
+                    <font>
+                        <Font size="13.0"/>
+                    </font>
+                </Button>
+            </buttons>
+        </ButtonBar>
+    </bottom>
+</BorderPane>

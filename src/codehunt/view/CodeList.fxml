@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="405.0"
+            prefWidth="734.0" style="-fx-background-color: #5e5e5e;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="codehunt.controller.CodeListController">
+    <center>
+        <ListView fx:id="foundCodesListView" onMouseClicked="#copy2Clipboard" prefHeight="200.0" prefWidth="200.0"
+                  style="-fx-background-color: #777777;" BorderPane.alignment="CENTER"/>
+    </center>
+    <top>
+        <Text fill="#c7c260" stroke="BLACK" strokeType="OUTSIDE" text="F O U N D - C O D E S"
+              BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="27.0"/>
+            </font>
+        </Text>
+    </top>
+    <bottom>
+        <Text fx:id="totalCodesFound" fill="#c7c260" onMouseClicked="#updateCodeData" stroke="BLACK"
+              strokeType="OUTSIDE" text="C O D E S - F O U N D : " BorderPane.alignment="CENTER">
+            <font>
+                <Font name="System Bold" size="19.0"/>
+            </font>
+        </Text>
+    </bottom>
+</BorderPane>
